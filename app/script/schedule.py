@@ -2,6 +2,9 @@ from  urllib.request import *
 from bs4 import BeautifulSoup
 import ssl
 import re
+import time
+import datetime
+
 
 from constant.constant_map import SCHEDULE_LINK_MAP
 
@@ -21,10 +24,15 @@ def get_book_link(td):
 
     return button.get('onclick')
 
+def handle_date(raw_date_string):
+    s = re.match('^(.*)\(.*\)$', raw_date_string).group(1)
+    s = time.mktime(datetime.datetime.strptime(s, "%Y/%m/%d").timetuple())
+    return s
+
 def parse_single_tr(tr):
     tds = tr.find_all('td')
     return {
-        'date': tds[0].string,
+        'date': handle_date(tds[0].string),
         'event': tds[1].string,
         'gym': tds[2].string,
         'book_link': parse_onclick_to_link(get_book_link(tds[3]))
