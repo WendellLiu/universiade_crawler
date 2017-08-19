@@ -1,0 +1,26 @@
+SCHEDULE_LINK = 'https://tickets.2017.taipei/schedule'
+
+SCHEDULE_LINK_MAP = {
+    'archery': 'https://tickets.2017.taipei/schedule/17_TPE_01',
+    'athletics': 'https://tickets.2017.taipei/schedule/17_TPE_02',
+    'badminton': 'https://tickets.2017.taipei/schedule/17_TPE_03',
+    'baseball': 'https://tickets.2017.taipei/schedule/17_TPE_04',
+    'basketball': 'https://tickets.2017.taipei/schedule/17_TPE_05',
+    'diving': 'https://tickets.2017.taipei/schedule/17_TPE_06',
+    'fencing': 'https://tickets.2017.taipei/schedule/17_TPE_07',
+    'football': 'https://tickets.2017.taipei/schedule/17_TPE_08',
+    'golf': 'https://tickets.2017.taipei/schedule/17_TPE_09',
+    'artistic_gymnastics': 'https://tickets.2017.taipei/schedule/17_TPE_10',
+    'rhythmic_gymnastics': 'https://tickets.2017.taipei/schedule/17_TPE_11',
+    'judo': 'https://tickets.2017.taipei/schedule/17_TPE_12',
+    'roller_sports': 'https://tickets.2017.taipei/schedule/17_TPE_13',
+    'swimming': 'https://tickets.2017.taipei/schedule/17_TPE_14',
+    'table_tennis': 'https://tickets.2017.taipei/schedule/17_TPE_15',
+    'taekwondo': 'https://tickets.2017.taipei/schedule/17_TPE_16',
+    'tennis': 'https://tickets.2017.taipei/schedule/17_TPE_17',
+    'volleyball': 'https://tickets.2017.taipei/schedule/17_TPE_18',
+    'water_polo': 'https://tickets.2017.taipei/schedule/17_TPE_19',
+    'weightlifting': 'https://tickets.2017.taipei/schedule/17_TPE_20',
+    'wushu': 'https://tickets.2017.taipei/schedule/17_TPE_21',
+    'billards': 'https://tickets.2017.taipei/schedule/17_TPE_22',
+}
