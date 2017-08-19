@@ -4,6 +4,7 @@ import ssl
 import re
 import time
 import datetime
+from pytz import timezone
 
 
 from constant.constant_map import SCHEDULE_LINK_MAP
@@ -26,7 +27,12 @@ def get_book_link(td):
 
 def handle_date(raw_date_string):
     s = re.match('^(.*)\(.*\)$', raw_date_string).group(1)
-    s = time.mktime(datetime.datetime.strptime(s, "%Y/%m/%d").timetuple())
+    s = datetime.datetime.strptime(s, "%Y/%m/%d")
+
+    localtz = timezone('Asia/Taipei')
+    s = localtz.localize(s)
+    s = s.isoformat()
+
     return s
 
 def parse_single_tr(tr):
